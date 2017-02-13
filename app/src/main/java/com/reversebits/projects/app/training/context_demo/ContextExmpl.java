@@ -1,7 +1,9 @@
 package com.reversebits.projects.app.training.context_demo;
 
 
+import android.app.LauncherActivity;
 import android.content.Intent;
+import android.content.pm.LauncherActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +28,7 @@ public class ContextExmpl extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_context);
 
@@ -55,7 +58,7 @@ public class ContextExmpl extends AppCompatActivity implements View.OnClickListe
 
                 rvMain.setAdapter(new MainAdapter(ContextExmpl.this));
 
-                startActivity(new Intent(ContextExmpl.this, MainActivity.class)); //ContextExmpl.this || v.getContext()
+                startActivity(new Intent(v.getContext(), MainActivity.class)); //ContextExmpl.this || v.getContext()
                 /* as activities needs reference to previous activities */
 
                 startActivity(new Intent(ContextExmpl.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); //getApplicationContext()
