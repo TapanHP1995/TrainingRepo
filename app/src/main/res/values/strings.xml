@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Training</string>
     <string name="fake_button">Fake Button</string>
+    <string name="mail">"@gmail.com"</string>
 </resources>
