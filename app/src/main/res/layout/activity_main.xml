@@ -57,10 +57,13 @@
             />
 
         <EditText
+            android:id="@+id/edi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/mail"
+            android:hint="@string/mail"
+            android:selectAllOnFocus="true"
+            android:onClick="onClick"
             android:gravity="left"
             android:background="@drawable/shape"
             android:padding="5dp"
@@ -150,17 +153,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Birthday"
+            android:text="Gender"
             android:textSize="20sp"
             />
 
-        <EditText
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:hint="I am....."
+            android:hint="I am"
             android:background="@drawable/shape"
-            android:padding="5dp"
+            android:padding="10dp"
             />
 
         <TextView
