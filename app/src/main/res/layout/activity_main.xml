@@ -62,9 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:hint="@string/mail"
-            android:selectAllOnFocus="true"
-            android:onClick="onClick"
-            android:gravity="left"
+            android:gravity="right"
             android:background="@drawable/shape"
             android:padding="5dp"
             />
