@@ -54,16 +54,39 @@
             android:layout_height="wrap_content"
             android:text="Choose your username"
             android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="100"
+        android:background="@drawable/shape"
 
-        <EditText
+        android:orientation="horizontal">
+
+
+
+
+
+    <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/shape"
             android:inputType="textEmailAddress"
-            android:hint="@string/mail"
-            android:padding="5dp" />
+        android:layout_weight="70"
+        android:background="@android:color/transparent"
+            android:padding="4dp" />
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:inputType="textEmailAddress"
+            android:layout_weight="90"
+            android:text="@string/mail"
+            android:padding="7dp" />
+
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
