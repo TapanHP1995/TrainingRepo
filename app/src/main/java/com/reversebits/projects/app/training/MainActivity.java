@@ -4,7 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     EditText preEditText;
@@ -12,6 +17,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Spinner spinner = (Spinner) findViewById(R.id.sp1);
+
+        // Spinner click listener
+
+
+        // Spinner Drop down elements
+        List<Integer> categories = new ArrayList<>();
+        categories.add(R.drawable.india);
+        categories.add(R.drawable.india);
+        categories.add(R.drawable.india);
+        categories.add(R.drawable.india);
+        categories.add(R.drawable.india);
+
+//        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+//
+//        // Drop down layout style - list view with radio button
+//        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//
+//        // attaching data adapter to spinner
+//        spinner.setAdapter(dataAdapter);
         preEditText=(EditText)findViewById(R.id.preEditText);
         preEditText.addTextChangedListener(new TextWatcher() {
             @Override
