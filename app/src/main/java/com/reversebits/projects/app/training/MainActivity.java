@@ -1,44 +1,48 @@
 package com.reversebits.projects.app.training;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.sql.BatchUpdateException;
+import com.reversebits.projects.app.training.lifecycle.First;
 
-public class MainActivity extends AppCompatActivity {
-    Button button1;
-    Button button2;
+import java.sql.BatchUpdateException;
+public class MainActivity extends Activity {
+
+    // Splash screen timer
+    private static int SPLASH_TIME_OUT = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        final Button button1 = (Button)findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Button button1 = (Button)findViewById(R.id.button1);
-                Button button2 = (Button)findViewById(R.id.button2);
+        setContentView(R.layout.lifecycle);
 
-                button1.setBackgroundResource(R.drawable.btn_selector);
-                button2.setBackgroundResource(R.drawable.btn_simple);
+        Thread timeThread=new Thread(){
+            public void run(){
 
+                try {
+                    sleep(2000);
+                }
+                catch (InterruptedException e){
+                    e.printStackTrace();
+                }finally {
+                    Intent intent=new Intent(MainActivity.this,First.class);
+                    startActivity(intent);
+                }
             }
-        });
+        };
 
-        Button button2 = (Button)findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Button button2 = (Button)findViewById(R.id.button2);
-                Button button1 = (Button)findViewById(R.id.button1);
-                button2.setBackgroundResource(R.drawable.btn_selector);
-                button1.setBackgroundResource(R.drawable.btn_simple);
-
-            }
-        });
+        timeThread.start();
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
     }
 }
