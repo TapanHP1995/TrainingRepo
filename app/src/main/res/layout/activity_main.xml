@@ -54,6 +54,7 @@
             android:textStyle="bold"/>
 
         <EditText
+            android:id="@+id/edGmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
@@ -133,12 +134,29 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <EditText
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="I am..."
-            android:maxLength="6"
-            android:background="#fff"/>
+            android:orientation="horizontal"
+            android:weightSum="100">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Female"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Male"/>
+        </RadioGroup>
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="I am..."-->
+            <!--android:maxLength="6"-->
+            <!--android:background="#fff"/>-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -155,10 +173,10 @@
         <!--<ImageView-->
             <!--android:layout_width="0dp"-->
             <!--android:layout_weight="10"-->
-            <!--android:src="@drawable/india"-->
+            <!--android:src="@drawable/ic_nr"-->
             <!--android:layout_height="35dp" />-->
             <Spinner
-                android:id="@+id/sp1"
+                android:id="@+id/spinner_flag"
                 android:background="@drawable/india"
                 android:layout_width="20dp"
                 android:layout_weight="10"
@@ -212,12 +230,19 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/btn_shape"
             android:layout_gravity="right"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:text="Next step"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="state"
+            android:textColor="@drawable/btn_selector"
+            />
 
     </LinearLayout>
 </ScrollView>

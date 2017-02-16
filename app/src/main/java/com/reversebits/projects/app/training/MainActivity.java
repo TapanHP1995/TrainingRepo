@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -17,8 +19,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final EditText etGmail=(EditText)findViewById(R.id.edGmail);
 
-        Spinner spinner = (Spinner) findViewById(R.id.sp1);
+        etGmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    etGmail.setGravity(Gravity.LEFT);
+                    if(etGmail.getText().length()==0)
+                    {
+                        etGmail.setHint("");
+                    }
+                } else {
+                    etGmail.setHint("@gmail.com");
+
+                    if (etGmail.getText().length() > 0) {
+                        etGmail.setGravity(Gravity.LEFT);
+
+                        etGmail.setHint("");
+
+
+                    } else
+                        etGmail.setGravity(Gravity.RIGHT);
+                }
+            }
+
+        });
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner_flag);
 
         // Spinner click listener
 
