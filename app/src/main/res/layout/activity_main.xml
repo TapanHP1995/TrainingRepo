@@ -26,6 +26,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="100">
+
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="First"
                 />
+       
 
             <EditText
                 android:layout_width="0dp"
@@ -101,7 +104,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:weightSum="100">
+
             <EditText
                 android:layout_width="wrap_content"
                 android:background="#fff"
@@ -110,6 +115,7 @@
                 android:layout_weight="40"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"/>
+
             <EditText
                 android:layout_width="wrap_content"
                 android:background="#fff"
@@ -237,12 +243,12 @@
             android:layout_marginTop="20dp"
             android:text="Next step"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="state"
-            android:textColor="@drawable/btn_selector"
-            />
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="state"-->
+            <!--android:textColor="@drawable/btn_selector"-->
+            <!--/>-->
 
     </LinearLayout>
 </ScrollView>
