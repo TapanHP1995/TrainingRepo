@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if(col==1){
             Main.setBackgroundResource(R.color.red);
+            Toast.makeText(getApplicationContext(),"HEllo ",Toast.LENGTH_LONG).show();
         }else if(col==2){
             Main.setBackgroundResource(R.color.yellow);
         }else{
