@@ -24,6 +24,7 @@ public class SplashActivity extends AppCompatActivity {
                 }finally {
                     Intent intent=new Intent(SplashActivity.this,ButtonActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         };
@@ -33,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        finish();
+
     }
 }
 

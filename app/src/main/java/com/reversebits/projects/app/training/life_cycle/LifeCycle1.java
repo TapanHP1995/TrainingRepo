@@ -24,7 +24,7 @@ public class LifeCycle1 extends AppCompatActivity {
 
         etFirstName = (EditText) findViewById(R.id.etFirstName);
         etLastName = (EditText) findViewById(R.id.etLastName);
-        ;
+
 
 
         lineLifeCycle = (LinearLayout) findViewById(R.id.lineLifeCycle);
@@ -56,7 +56,7 @@ public class LifeCycle1 extends AppCompatActivity {
         final EditText textBox1 =
                 (EditText) findViewById(R.id.etLastName);
         CharSequence userText1 = textBox1.getText();
-        outState.putCharSequence("savedText", userText1);
+        outState.putCharSequence("savedText1", userText1);
     }
     @Override
     protected void onRestoreInstanceState(Bundle savedState) {
@@ -70,7 +70,7 @@ public class LifeCycle1 extends AppCompatActivity {
         final EditText textBox1 =
                 (EditText) findViewById(R.id.etLastName);
         CharSequence userText1 =
-                savedState.getCharSequence("savedText");
+                savedState.getCharSequence("savedText1");
         textBox1.setText(userText1);
 
 
