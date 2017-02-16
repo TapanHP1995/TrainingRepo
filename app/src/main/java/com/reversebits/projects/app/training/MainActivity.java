@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onFocusChange(View view, boolean hasFocus) {
                 if (hasFocus) {
                     edi.setGravity(Gravity.LEFT);
-                    if(edi.getText().length()==0)
-                    {
+                    if(edi.getText().length()==0) {
                         edi.setHint("");
                     }
                 } else {
@@ -35,12 +34,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                     if (edi.getText().length() > 0) {
                         edi.setGravity(Gravity.LEFT);
-
                         edi.setHint("");
-
-
-                    } else
+                    } else {
                         edi.setGravity(Gravity.RIGHT);
+                    }
                 }
             }
         });
