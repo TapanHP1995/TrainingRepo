@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.reversebits.projects.app.training.R;
 
@@ -24,7 +23,7 @@ public class Form extends AppCompatActivity {
         setContentView(R.layout.activity_form);
 
        EditText edittext1=(EditText)findViewById(R.id.edittext1);
-        EditText edittext2=(EditText)findViewById(R.id.edittext1);
+        EditText edittext2=(EditText)findViewById(R.id.edittext2);
 
 
         Intent intent = getIntent();
