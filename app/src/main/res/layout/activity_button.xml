@@ -13,10 +13,18 @@
 
 
     <ImageView
+        android:id="@+id/ivBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/splash"
         android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Hellooo"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +46,7 @@
         android:layout_width="0dp"
         android:layout_weight="33.33"
         android:layout_height="wrap_content"
-        android:background="@color/yellow"
+        android:background="@drawable/ripple"
         android:text="Yellow"/>
 
     <Button
