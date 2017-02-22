@@ -58,14 +58,14 @@ public class ButtonActivity extends AppCompatActivity {
             }
         });
 
-//        btnYellow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i2 = new Intent(ButtonActivity.this, LifeCycle1.class);
-//                i2.putExtra(LifeCycle1.COLOR_VAL, 2);
-//                startActivity(i2);
-//            }
-//        });
+        btnYellow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(ButtonActivity.this, LifeCycle1.class);
+                i2.putExtra(LifeCycle1.COLOR_VAL, 2);
+                startActivity(i2);
+            }
+        });
 
         btnGreen.setOnClickListener(new View.OnClickListener() {
             @Override
